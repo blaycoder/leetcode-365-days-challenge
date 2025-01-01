@@ -1,6 +1,6 @@
 // counter with increment, decrement and reset methods
 let createCounter = function (init) {
-  let currentVal = init ;
+  let currentVal = init;
   return {
     increment: () => {
       return ++currentVal;
@@ -13,4 +13,3 @@ let createCounter = function (init) {
     },
   };
 };
-
