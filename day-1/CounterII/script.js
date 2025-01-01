@@ -1,16 +1,15 @@
+// counter with increment, decrement and reset methods
 let createCounter = function (init) {
-  let currentVal;
+  let currentVal = init ;
   return {
     increment: () => {
-      currentVal = ++init;
-      return currentVal;
+      return ++currentVal;
     },
     decrement: () => {
-      currentVal = --init;
-      return currentVal;
+      return --currentVal;
     },
     reset: () => {
-      return init;
+      return (currentVal = init);
     },
   };
 };
