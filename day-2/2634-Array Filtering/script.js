@@ -25,23 +25,3 @@ let filter = function (arr, fn) {
   }
   return filteredArr;
 };
-
-const arrNum = [0, 10, 20, 30];
-function greaterThan10(n) {
-  return n > 10;
-}
-
-function firstIndex(n, i) {
-  return i === 0;
-}
-
-function plusOne(n) {
-  return n + 1;
-}
-
-const arrOne = [-2, -1, 0, 1, 2];
-const arrFirstIndex = [1, 2, 3];
-console.log(filter(arrFirstIndex, firstIndex));
-
-console.log(filter(arrNum, greaterThan10));
-console.log(filter(arrOne, plusOne));
