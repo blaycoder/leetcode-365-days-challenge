@@ -1,26 +1,27 @@
 let map = function (arr, fn) {
-  let newArr = [];
+  const newArr = [];
   for (let i = 0; i < arr.length; i++) {
-    newArr.push(fn(arr[i]));
+    if (fn.length === 1) {
+      newArr.push(fn(arr[i]));
+    } else {
+      newArr.push(fn(arr[i], i));
+    }
   }
-  return (newArr, newArr[i]);
+  return newArr;
 };
 
 function plusone(num) {
   return num + 1;
 }
 
-let arrNum = [1, 2, 3];
-
 function plusI(n, i) {
   return n + i;
 }
 
-const newArray = map(arrNum, plusone);
-// console.log(newArray);
+const arrNum = [1, 2, 3];
+console.log(map(arrNum, plusone));
 
-const newArray1 = map(arrNum, plusI);
-console.log(newArray1);
+console.log(map(arrNum, plusI));
 
 // Given an integer array arr and a mapping function fn, return a new array with a transformation applied to each element.
 // // The returned array should be created such that returnedArray[i] = fn(arr[i], i).
