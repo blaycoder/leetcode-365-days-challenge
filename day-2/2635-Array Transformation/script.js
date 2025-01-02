@@ -4,7 +4,7 @@ let map = function (arr, fn) {
     if (fn.length === 1) {
       newArr.push(fn(arr[i]));
     }
-    if (fn.length === 0) {
+    else if (fn.length === 0) {
       newArr.push(fn());
     } else {
       newArr.push(fn(arr[i], i));
