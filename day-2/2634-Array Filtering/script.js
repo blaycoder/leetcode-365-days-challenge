@@ -18,7 +18,7 @@ let filter = function (arr, fn) {
         filteredArr.push(arr[i]);
       }
     } else {
-      if (fn(arr[i], i) === true) {
+      if (fn(arr[i], i) === true || fn(arr[i], i)) {
         filteredArr.push(arr[i]);
       }
     }
